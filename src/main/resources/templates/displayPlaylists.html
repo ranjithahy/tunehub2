@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>View Playlists</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                  url('https://images.unsplash.com/photo-1508779018996-6016b8b87663?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 36px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    th, td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    th {
+      background-color: rgba(0, 119, 182, 0.6);
+      font-size: 18px;
+      color: #fff;
+    }
+
+    tr:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style-type: none;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    audio {
+      display: block;
+      margin-top: 6px;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎶 View All Playlists</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Songs</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="plist : ${allPlaylists}">
+        <td th:text="${plist.name}">Playlist Name</td>
+        <td>
+          <ul>
+            <li th:each="song : ${plist.songs}">
+              <span th:text="${song.name}">Song Name</span>
+              <audio controls>
+                <source th:src="${song.link}" type="audio/mpeg" />
+              </audio>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

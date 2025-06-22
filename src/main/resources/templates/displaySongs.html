@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>All Songs</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                  url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    th {
+      background-color: rgba(0, 119, 182, 0.6);
+      color: #fff;
+      font-size: 16px;
+    }
+
+    tr:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    audio {
+      width: 200px;
+      border-radius: 5px;
+    }
+
+    iframe {
+      height: 100px;
+      width: 500px;
+    }
+  </style>
+</head>
+<body>
+  <table border>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Artist</th>
+        <th>Genre</th>
+        <th>Play</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="song:${songs}">
+        <td th:text="${song.name}"></td>
+        <td th:text="${song.artist}"></td>
+        <td th:text="${song.genre}"></td>
+        <td>
+          <audio controls>
+            <source th:src="${song.link}" type="audio/mpeg">
+          </audio>				
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

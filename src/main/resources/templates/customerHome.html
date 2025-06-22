@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Customer Home</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 42px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      margin-bottom: 40px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 15px;
+      padding: 14px 28px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #0077b6;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .button:hover {
+      background-color: #023e8a;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎵 Welcome to TuneHub, Customer</h1>
+  <a href="pay" class="button">💎 Get Premium</a>
+  <a href="logout" class="button">🚪 Logout</a>
+
+</body>
+</html>

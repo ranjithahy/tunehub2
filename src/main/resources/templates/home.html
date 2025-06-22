@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Welcome to TuneHub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url('46a66c6e-9c4d-425e-88a4-276ff2c1bd0b.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 255, 255, 0.2);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: #00e6e6;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 12px 10px;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+      background-color: #00e6e6;
+      border-radius: 50px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 16px rgba(0, 255, 255, 0.3);
+    }
+
+    .btn:hover {
+      background-color: #00cccc;
+      transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 600px) {
+      .btn {
+        display: block;
+        margin: 10px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎧 Welcome to TuneHub</h1>
+    <a href="login" class="btn">🔐 Login</a>
+    <a href="registration" class="btn">📝 Register</a>
+    <a href="viewSongs" class="btn">🎵 View Songs</a>
+    <a href="createPlaylist" class="btn">➕ Create Playlist</a>
+  </div>
+</body>
+</html>

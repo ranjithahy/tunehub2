@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register | Tune Hub</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f0f0, #dcdcdc);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+  }
+
+  .form-container {
+    width: 500px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2980b9;
+  }
+
+  label {
+    font-weight: 600;
+    display: block;
+    margin-top: 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  textarea:focus {
+    border-color: #2980b9;
+  }
+
+  input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 15px;
+  }
+
+  textarea {
+    height: 80px;
+    resize: none;
+  }
+
+  input[type="submit"] {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: #2980b9;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #1c5980;
+  }
+</style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Registration</h1>
+    <form action="registration" method="post">
+      <label>User Name:</label>
+      <input type="text" name="username" required />
+
+      <label>Email:</label>
+      <input type="email" name="email" required />
+
+      <label>Password:</label>
+      <input type="password" name="password" required />
+
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="male" required /> M
+      <input type="radio" name="gender" value="female" /> F
+      <input type="radio" name="gender" value="Other" /> O
+
+      <label>Role:</label>
+      <input type="radio" name="role" value="admin" required /> Admin
+      <input type="radio" name="role" value="customer" /> Customer
+
+      <label>Address:</label>
+      <textarea name="address" required></textarea>
+
+      <input type="submit" value="Register" />
+    </form>
+  </div>
+
+</body>
+</html>

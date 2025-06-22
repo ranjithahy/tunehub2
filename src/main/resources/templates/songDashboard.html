@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Tune Hub | Songs</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 40px;
+      margin: 80px auto;
+      width: 600px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 20px #16a085;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #1abc9c;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 10px;
+      background-color: #1abc9c;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #16a085;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome to Tune Hub</h2>
+    <p>Your premium access is now active!</p>
+
+    <a href="/viewSongs" class="btn">View Songs</a>
+    <a href="/playSongs" class="btn">Play Songs</a>
+
+    <div th:if="${session.role == 'admin'}">
+      <a href="/addSongPage" class="btn">Add Songs</a>
+      <a href="/createPlaylist" class="btn">Create Playlist</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Song | Admin Panel</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+  }
+
+  .form-container {
+    width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 12px #9b59b6;
+  }
+
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #9b59b6;
+  }
+
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #9b59b6;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #8e44ad;
+  }
+</style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>ADD NEW SONG</h2>
+    <form action="addSong" method="post">
+      <label>Song Name:</label>
+      <input type="text" name="name" required />
+
+      <label>Song Artist:</label>
+      <input type="text" name="artist" required />
+
+      <label>Song Genre:</label>
+      <input type="text" name="genre" required />
+
+      <label>Song Link:</label>
+      <input type="text" name="link" required />
+
+      <input type="submit" value="ADD SONG" />
+    </form>
+  </div>
+
+</body>
+</html>

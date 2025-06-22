@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                  url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #f4f4f4;
+    }
+
+    .header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px 40px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    .header h1 {
+      font-size: 32px;
+      color: #ffffff;
+    }
+
+    .container {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 20px 15px;
+      padding: 14px 28px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #0077b6;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .button:hover {
+      background-color: #023e8a;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
+      font-size: 14px;
+      background-color: rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>🎧 Admin Dashboard - TuneHub</h1>
+  </div>
+
+  <div class="container">
+    <a href="newSong" class="button">➕ Add a New Song</a>
+    <a href="viewSongs" class="button">🎵 View All Songs</a>
+    <a href="createPlaylist" class="button">📂 Create Playlist</a>
+    <a href="viewPlaylists" class="button">📃 View All Playlists</a>
+  </div>
+
+  <footer>
+    &copy; 2025 TuneHub. All rights reserved.
+  </footer>
+
+</body>
+</html>
